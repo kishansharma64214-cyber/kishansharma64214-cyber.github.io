@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sonora – Bollywood, Hindi rap, Punjabi and English hits</title>
+<meta name="description" content="Browse and play Bollywood, Hindi rap, Punjabi and English songs from official YouTube videos.">
+<style>
+:root{--bg:#fff;--panel:#f5f5f7;--text:#1d1d1f;--sub:#6e6e73;--line:#e5e5ea;--acc:#fa2d48;color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--bg:#000;--panel:#1c1c1e;--text:#f5f5f7;--sub:#98989d;--line:#2c2c2e;color-scheme:dark}}
+*{box-sizing:border-box;margin:0}
+html,body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body{padding-top:env(safe-area-inset-top,0px)}
+button,input{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+header{position:sticky;top:0;z-index:5;display:flex;gap:14px;align-items:center;padding:12px 20px;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.logo{display:flex;gap:8px;align-items:center;font-weight:700;font-size:20px;letter-spacing:-.02em}
+.logo i{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,#fa2d48,#ff7a45);display:grid;place-items:center;color:#fff;font-style:normal;font-size:14px}
+#q{flex:1;max-width:340px;margin-left:auto;padding:9px 14px;border-radius:10px;border:0;background:var(--panel);font-size:14px}
+main{max-width:920px;margin:0 auto;padding:30px 20px 340px}
+h1{font-size:34px;letter-spacing:-.03em}
+.sub{color:var(--sub);font-size:14px;margin:6px 0 18px;max-width:60ch;line-height:1.5}
+.chip{padding:7px 14px;border-radius:99px;background:var(--panel);font-size:13px;margin:0 6px 8px 0}
+.chip.on{background:var(--acc);color:#fff}
+.list{border-top:1px solid var(--line);margin-top:10px}
+.row{display:grid;grid-template-columns:48px 1fr auto 36px;gap:14px;align-items:center;width:100%;text-align:left;padding:9px 6px;border-bottom:1px solid var(--line);border-radius:8px}
+.row:hover{background:var(--panel)}
+.row.on b{color:var(--acc)}
+.art{width:48px;aspect-ratio:1;border-radius:7px;position:relative;overflow:hidden}
+.art::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.35),transparent 55%)}
+.row b{display:block;font-size:15px;font-weight:600}
+.row span{font-size:13px;color:var(--sub)}
+.row .g{font-size:12px}
+.row .st{font-size:16px;text-align:center}
+.empty{padding:24px 0;color:var(--sub)}
+#panel{position:fixed;right:0;bottom:0;left:0;z-index:9;padding:14px 18px calc(14px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--panel) 92%,transparent);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-top:1px solid var(--line)}
+#panel .in{max-width:920px;margin:0 auto;display:grid;gap:10px}
+#panel .top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+#panel b{font-size:15px}
+#panel .s{font-size:13px;color:var(--sub)}
+.vid{position:relative;aspect-ratio:16/9;max-height:220px;width:100%;margin:0 auto;border-radius:10px;overflow:hidden;background:#000}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.paste{display:flex;gap:8px;flex-wrap:wrap}
+.paste input{flex:1;min-width:180px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);font-size:14px}
+.btn{padding:10px 16px;border-radius:10px;background:var(--acc);color:#fff;font-weight:600;font-size:14px;text-decoration:none;display:inline-block}
+.btn.alt{background:var(--bg);color:var(--text);border:1px solid var(--line)}
+.x{font-size:20px;color:var(--sub);padding:0 6px}
+@media(min-width:760px){#panel{left:auto;width:400px;border-left:1px solid var(--line);border-radius:14px 0 0 0}}
+@media(max-width:560px){.row{grid-template-columns:48px 1fr 32px}.row .g{display:none}h1{font-size:28px}}
+.pl{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin:8px 0 22px}.pl a{padding:14px 16px;border-radius:12px;background:var(--panel);color:var(--text);text-decoration:none;font-weight:600;font-size:15px}.pl a:hover{color:var(--acc)}footer{border-top:1px solid var(--line);padding:22px 20px 120px;text-align:center;font-size:13px;color:var(--sub)}footer a{color:var(--sub);margin:0 8px}</style>
+</head>
+<body>
+<header><div class="logo"><i>♪</i>Sonora</div><nav style="display:flex;gap:16px;font-size:14px"><a href="/about.html" style="color:var(--sub);text-decoration:none">About</a><a href="/contact.html" style="color:var(--sub);text-decoration:none">Contact</a></nav><input id="q" type="search" placeholder="Search songs or artists" aria-label="Search"></header>
+<main>
+ <h1>Hits worth playing</h1>
+ <p class="sub">Bollywood, Hindi rap, Punjabi and English songs. Every song plays from its official YouTube video, so the artists get the views.</p>
+ <!-- Google AdSense: paste your ad code here once your site is approved -->
+ <h2 style="font-size:20px;margin:6px 0 4px">Playlists</h2><div class="pl"><a href="/gym-hindi-rap.html">Hindi rap for the gym</a><a href="/bollywood-classics.html">Bollywood songs everyone knows</a><a href="/karan-aujla-starter-pack.html">Karan Aujla starter pack</a><a href="/english-songs-to-focus.html">English songs for study sessions</a></div><h2 style="font-size:20px;margin:18px 0 4px">All songs</h2><div id="chips"></div>
+ <div id="list"></div>
+</main><footer><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy policy</a><p style="margin:8px 0 0">© 2026 Sonora. Music plays from official YouTube videos and belongs to its artists and labels.</p></footer>
+<div id="panel" hidden><div class="in" id="pin"></div></div>
+<script>
+var Y=[['Tum Hi Ho','Arijit Singh','Bollywood'],['Kesariya','Arijit Singh','Bollywood'],['Channa Mereya','Arijit Singh','Bollywood'],['Chaiyya Chaiyya','Sukhwinder Singh','Bollywood'],['Kal Ho Naa Ho','Sonu Nigam','Bollywood'],['Kun Faya Kun','A. R. Rahman','Bollywood'],['Jai Ho','A. R. Rahman','Bollywood'],['Tera Ban Jaunga','Akhil Sachdeva, Tulsi Kumar','Bollywood'],['Apna Time Aayega','Ranveer Singh','Hindi rap'],['Sher Aaya Sher','Divine','Hindi rap'],['Mere Gully Mein','Divine, Naezy','Hindi rap'],['Machayenge','Emiway Bantai','Hindi rap'],['Khatta Flow','Seedhe Maut','Hindi rap'],['Namastute','Seedhe Maut','Hindi rap'],['Softly','Karan Aujla','Punjabi'],['52 Bars','Karan Aujla','Punjabi'],['Winning Speech','Karan Aujla','Punjabi'],['Blinding Lights','The Weeknd','English'],['Shape of You','Ed Sheeran','English'],['Believer','Imagine Dragons','English'],['Levitating','Dua Lipa','English'],['Lose Yourself','Eminem','English'],['Heat Waves','Glass Animals','English']];
+var C=[["#fa2d48","#7b2ff7"],["#00c6ff","#0072ff"],["#f7971e","#ffd200"],["#11998e","#38ef7d"],["#ee0979","#ff6a00"],["#654ea3","#eaafc8"],["#232526","#6a6a6a"],["#ff9a9e","#fad0c4"]];
+var S={};try{S=JSON.parse(localStorage.getItem('sonora-ids')||'{}')}catch(e){}
+var gen='All',cur=-1,GS=['All','Bollywood','Hindi rap','Punjabi','English'];
+function save(){try{localStorage.setItem('sonora-ids',JSON.stringify(S))}catch(e){}}
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){
+ var q=document.getElementById('q').value.toLowerCase();
+ document.getElementById('chips').innerHTML=GS.map(function(g){return '<button class="chip'+(g===gen?' on':'')+'" data-g="'+g+'">'+g+'</button>'}).join('');
+ var l=Y.map(function(y,i){return{y:y,i:i}}).filter(function(o){return(gen==='All'||o.y[2]===gen)&&(o.y.join(' ').toLowerCase().indexOf(q)>-1)});
+ document.getElementById('list').innerHTML=l.length?'<div class="list">'+l.map(function(o){var c=C[o.i%C.length];return '<button class="row'+(o.i===cur?' on':'')+'" data-i="'+o.i+'"><div class="art" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')"></div><div><b>'+esc(o.y[0])+'</b><span>'+esc(o.y[1])+'</span></div><span class="g">'+o.y[2]+'</span><span class="st">'+(S[o.i]?'▶':'＋')+'</span></button>'}).join('')+'</div>':'<p class="empty">No songs found.</p>'}
+function openP(i){
+ cur=i;var y=Y[i],p=document.getElementById('panel'),h='';
+ var top='<div class="top"><div><b>'+esc(y[0])+'</b><div class="s">'+esc(y[1])+'</div></div><button class="x" id="cl" aria-label="Close">✕</button></div>';
+ var url='https://www.youtube.com/results?search_query='+encodeURIComponent(y[0]+' '+y[1]+' official');
+ if(S[i]){h=top+'<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/'+S[i]+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="'+esc(y[0])+'"></iframe></div><div class="paste"><a class="btn alt" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v='+S[i]+'">Open on YouTube</a><button class="btn alt" id="chg">Change video</button></div><div class="s">If the video says it can’t be played here, the label turned off embedding. Use Open on YouTube.</div>'}
+ else{h=top+'<div class="s">Find the official video on YouTube, copy its link, then paste it below.</div><div class="paste"><a class="btn alt" target="_blank" rel="noopener" href="'+url+'">Find on YouTube</a></div><div class="paste"><input id="lk" placeholder="Paste the YouTube link here" aria-label="YouTube link"><button class="btn" id="sv">Play</button></div><div class="s" id="er"></div>'}
+ document.getElementById('pin').innerHTML=h;p.hidden=false;render()}
+function vid(u){var m=u.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/);return m?m[1]:null}
+document.addEventListener('click',function(e){var t=e.target;
+ var g=t.closest('[data-g]');if(g){gen=g.dataset.g;return render()}
+ var r=t.closest('[data-i]');if(r)return openP(+r.dataset.i);
+ if(t.id==='cl'){document.getElementById('panel').hidden=true;cur=-1;render()}
+ if(t.id==='chg'){delete S[cur];save();openP(cur)}
+ if(t.id==='sv'){var id=vid(document.getElementById('lk').value.trim());if(!id){document.getElementById('er').textContent='That doesn’t look like a YouTube link. Copy the link from the video’s Share button.';return}S[cur]=id;save();openP(cur)}});
+document.getElementById('q').oninput=render;
+render();
+</script>
+</body>
+</html>
